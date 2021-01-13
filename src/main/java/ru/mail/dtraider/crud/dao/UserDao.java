@@ -1,7 +1,6 @@
 package ru.mail.dtraider.crud.dao;
 
 
-
 import ru.mail.dtraider.crud.model.User;
 
 import java.util.List;

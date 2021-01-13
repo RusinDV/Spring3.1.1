@@ -5,12 +5,12 @@ import org.springframework.stereotype.Repository;
 import ru.mail.dtraider.crud.model.User;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Repository
 public class UserDaoJpaRepositoryImpl implements UserDao {
     @Autowired
-    UserJPARepository userJPARepository;
+    private UserJPARepository userJPARepository;
 
     @Override
     public void createUser(User user) {
@@ -42,3 +42,4 @@ public class UserDaoJpaRepositoryImpl implements UserDao {
         return userJPARepository.findAll();
     }
 }
+

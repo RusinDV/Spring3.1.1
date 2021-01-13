@@ -1,23 +1,17 @@
 package ru.mail.dtraider.crud.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column
     private String name;
-
-    @Column
     private String lastName;
-
-    @Column
-    private String password;
-
-    @Column
     private int age;
 
     public User() {
@@ -27,14 +21,6 @@ public class User {
         this.name = name;
         this.lastName = lastName;
         this.age = age;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public Long getId() {
