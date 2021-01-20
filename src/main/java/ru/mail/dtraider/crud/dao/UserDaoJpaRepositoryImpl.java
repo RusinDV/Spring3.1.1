@@ -19,13 +19,13 @@ public class UserDaoJpaRepositoryImpl implements UserDao {
 
     @Override
     public User readUser(Long idUser) {
-        User user = userJPARepository.getOne(idUser);
+        User user = userJPARepository.findById(idUser).get();
         return user;
     }
 
     @Override
     public void updateUser(Long idUser, String name, String lastname, int age) {
-        User user = userJPARepository.getOne(idUser);
+        User user = userJPARepository.findById(idUser).get();
         user.setName(name);
         user.setLastName(lastname);
         user.setAge(age);
